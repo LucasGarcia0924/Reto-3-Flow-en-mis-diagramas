@@ -77,10 +77,10 @@ fin
 ```mermaid
 graph TD;
     A(Inicio);
-A -->B[número x];
+A -->B[número x entero positivo];
 B -->C[a = 9];
-C -->E[x se divide en números de 2 <br> dígitos de derecha a izquierda];
-E -->F[las primeras 2 cifras = q];
+C -->E[x se divide en conjuntos de 2 <br> cifras de derecha a izquierda];
+E -->F[el primer conjunto de cifras de izquierda a derecha = q];
 F -->G{a^2 menor que q ?};
 G -->|Sí|H[la primera cifra <br> de la raíz es a];
 G -->|No|I[a = a - 1];
