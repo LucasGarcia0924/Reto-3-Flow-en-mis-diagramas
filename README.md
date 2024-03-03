@@ -38,7 +38,7 @@ Repositorio en donde se publica la evidencia de que mi persona, Lucas García, c
     W-->V(Fin);
 ```
 
-### En Pseudocódigo
+### En Pseudocódigo:
 
 ```pseudocode
 [variables]
@@ -68,6 +68,34 @@ inicio
         escribir("l es primo")
       l := l + 1
     Fin mientras
-    Cantidad_de_números_primos_hasta_n := l primos + 1
+    Cantidad_de_numeros_primos_hasta_n := l primos + 1
 fin
+```
+## Algoritmo para hallar la raíz cuadrada de un número:
+***
+### Diagrama de Flow(Flujo):
+```mermaid
+graph TD;
+    A(Inicio);
+A -->B[número x];
+B -->C[a = 9];
+C -->E[x se divide en números de 2 <br> dígitos de derecha a izquierda];
+E -->F[las primeras 2 cifras = q];
+F -->G{a^2 menor que q ?};
+G -->|Sí|H[la primera cifra <br> de la raíz es a];
+G -->|No|I[a = a - 1];
+I -->G;
+H -->J[q - a^2 = r];
+J -->K{Faltan otras cifras ?};
+K -->|No|L["La raíz más <br> cercana es  √(a^2)"];
+K -->|Sí|M[a r se le añaden <br> otro conjunto de cifras = u];
+M -->N[n = 9];
+N -->O{"u > (a*2 seguido de n) * n = h ?"};
+O -->|Sí|P[n = n - 1];
+P -->O;
+O -->|No|Q[u - h = r];
+Q -->R{Faltan más cifras?};
+R -->|Sí|M;
+R -->|No|T["La raíz más próxima es <br> √(a seguido de todos los n)"];
+T -->S(Fin);
 ```
