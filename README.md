@@ -90,7 +90,7 @@ J -->K{Faltan otras cifras ?};
 K -->|No|L["La raíz más <br> cercana es  √(a^2)"];
 K -->|Sí|M[a r se le añaden <br> otro conjunto de cifras = u];
 M -->N[n = 9];
-N -->O{"u > (a*2 seguido de n) * n = h ?"};
+N -->O{"u menor a <br>(a*2 seguido de n) * n = h ?"};
 O -->|Sí|P[n = n - 1];
 P -->O;
 O -->|No|Q[u - h = r];
