@@ -68,6 +68,6 @@ inicio
         escribir("l es primo")
       l := l + 1
     Fin mientras
-
+    Cantidad_de_números_primos_hasta_n := l primos + 1
 fin
 ```
