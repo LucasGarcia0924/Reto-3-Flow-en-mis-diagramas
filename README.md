@@ -7,6 +7,9 @@ Repositorio en donde se publica la evidencia de que mi persona, Lucas García, c
 ## Logo de mi equipo(infaltable):
 ***
 
+ [![Logo-equipo.webp](https://i.postimg.cc/Z5BYw1Tx/Logo-equipo.webp)](https://postimg.cc/9D2jMgwD)
+
+
 ## Algoritmo para obtener números primos hasta N
 ***
 ### Diagrama de Flow(Flujo):
@@ -53,7 +56,7 @@ inicio
   Si n <= 1 entonces
     escribir("no hay números primos hasta n")
 
-  Sino si n == 2 entonces
+  Sino si n == 2 entonces;
     escribir("solo hay 1 número primo hasta n")
 
   sino
@@ -64,7 +67,7 @@ inicio
         sino
           i := i + 1
       Fin mientras
-      Si i > l^0.5 entonces 
+      Si i > l^0.5 entonces
         escribir("l es primo")
       l := l + 1
     Fin mientras
@@ -98,4 +101,41 @@ Q -->R{Faltan más cifras?};
 R -->|Sí|M;
 R -->|No|T["La raíz más próxima es <br> √(a seguido de todos los n)"];
 T -->S(Fin);
+```
+
+### En Pseudocódigo:
+```pseudocode
+[variables]
+n : entero
+x : entero
+u : entero
+r : entero
+h : entero
+a : entero
+
+inicio
+ a := 9
+ q := último conjunto de parejas de cifras de x de derecha a izquierda
+
+ Mientras (q <= a^2) hacer
+  a := a - 1
+ Fin mientras
+ r := q - a^2
+
+ Si x > 99 entonces
+  Mientras (x tenga más conjuntos de cifras) hacer
+   u:= r seguido de 2 cifras faltantes
+   n := 9
+   h := (a*2 seguido de n) * n
+   Mientras (u < h) hacer
+    n := n - 1
+   Fin mientras
+   r := u - h
+  Fin mientras 
+  escribir("La raíz más próxima es √(a seguido de todos los n)")
+
+ sino
+  escribir("La raíz más cercana es √(a^2)")
+
+fin
 ```
